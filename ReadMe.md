@@ -15,6 +15,7 @@
 ### Yazlıkların ortalama metrekaresini dönen metot
 ### Tüm tipteki evlerin ortalama metrekaresini dönen metot
 ### Oda ve salon sayısına göre tüm tipteki evleri filtreleyip dönen metot
+![img.png](img.png)
 
 
 
