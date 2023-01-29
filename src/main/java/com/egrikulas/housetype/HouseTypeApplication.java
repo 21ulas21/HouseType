@@ -19,13 +19,14 @@ public class HouseTypeApplication {
 
 
         HomeService homeService = new HomeService();
+        //                      hall(salon sayısı)-room(oda sayısı)-price(fiyat)-size(metrekare)
         Villa villa1=new Villa(3,6,250000L,3000);
         Villa villa2=new Villa(2,5,200000L,2000);
         Villa villa3=new Villa(1,3,125000L,1700);
         homeService.addVilla(villa1);
         homeService.addVilla(villa2);
         homeService.addVilla(villa3);
-
+        // Villa tipinde nesnelerimiz oluşturulduğu ve servis katmanındaki liste kaydedildiği kısım
 
         House house1=new House(2,5,200000L,1350);
         House house2=new House(1,3,165000L,1200);
@@ -33,6 +34,7 @@ public class HouseTypeApplication {
         homeService.addHouse(house1);
         homeService.addHouse(house2);
         homeService.addHouse(house3);
+        //Ev tipindeki nesnelerimizin oluşturulduğu ve servis katmanındaki liste kaydedildiği kısım
 
 
         SummerHouse summerHouse1 = new SummerHouse(3,5,750000L,1850);
@@ -41,6 +43,7 @@ public class HouseTypeApplication {
         homeService.addSummerHouse(summerHouse1);
         homeService.addSummerHouse(summerHouse2);
         homeService.addSummerHouse(summerHouse3);
+        // Yazlık ev tipindeki nesnelerimizin oluşturulduğu ve servis katmanındaki liste kaydedildiği kısım
         System.out.println("----------------------------------");
         System.out.println("Total Price Of Houses = "+homeService.getHouseTotalPrice() );
         System.out.println("Total Price Of SummerHouses = "+homeService.getSummerHouseTotalPrice() );
@@ -56,6 +59,7 @@ public class HouseTypeApplication {
         homeService.RoomAndHallFilter(3,1).forEach(baseEntity -> {
             System.out.print(baseEntity+" - ");
         });
+        // Bizden istenen metotların çıktılarını aldığımız kısım
 
 
 

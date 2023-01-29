@@ -14,7 +14,7 @@ public class HomeService {
     List<Villa> villaList = new ArrayList<>();
     List<House> houseList = new ArrayList<>();
     List<SummerHouse> summerHouseList = new ArrayList<>();
-
+    //generic tipleri ev tiplerimiz olan listler oluşturuldu
     public void addVilla(Villa villa){
         villaList.add(villa);
     }
@@ -24,6 +24,7 @@ public class HomeService {
     public void addSummerHouse(SummerHouse summerHouse){
         summerHouseList.add(summerHouse);
     }
+    // Tanımladığımız listlere değer atamasını yapan fonksiyonlar
     public List<Villa> getVillaList(){
         return villaList;
     }
@@ -33,6 +34,7 @@ public class HomeService {
     public List<SummerHouse> getSummerHouseList(){
         return summerHouseList;
     }
+    // Listlerde tutulan kayıtları dönen metotlarımız
     public Long getHouseTotalPrice(){
         Long temp=0L;
         for (House house:houseList) {
@@ -53,10 +55,11 @@ public class HomeService {
         }
         return temp;
     }
+    // Her ev tipi için ayrı toplam fiyat hesaplayan metotlarımız
     public Long getAllTotalPrice(){
         return getHouseTotalPrice()+getVillaTotalPrice()+getSummerHouseTotalPrice();
     }
-
+    // Bütün evler(ev tipi farketmeksizin) toplam fiyat hesaplayan metodumuz
     public double getAvgHouseSize(){
         double temp=0;
         for (House house:houseList) {
@@ -80,10 +83,12 @@ public class HomeService {
         }
         return temp/villaList.size();
     }
+    //Evlerin ortalama metrekaresini hesaplayan metotlarımız
 
     public double getAllAvgSize(){
         return getAvgHouseSize()+getAvgVillaSize()+getAvgSummerHouseSize();
     }
+    //Bütün evlerin metrekaresini hesaplayan metodumuz
     public List<BaseEntity> RoomAndHallFilter(int room, int hall){
         List<BaseEntity> baseEntityList = new ArrayList<>();
         for (House house:houseList) {
@@ -106,6 +111,7 @@ public class HomeService {
         }
         return  baseEntityList;
     }
+    //verilen değerlere göre (Bu örnek için sadece oda ve salon sayısı verilmiştir) ev tipi farketmeksizin filtreleme yapan metodumuz
 
 
 }
